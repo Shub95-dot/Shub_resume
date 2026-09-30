@@ -3,162 +3,589 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Shirodkar | Resume</title>
+  <title>Shubham Shirodkar | Data Analyst & AI Resume</title>
+  <meta name="description" content="Resume of Shubham Shirodkar, MSc Artificial Intelligence and Data Science student focused on data analytics, machine learning, and predictive modelling." />
   <style>
+    :root {
+      --bg: #08111f;
+      --bg-2: #0d1b2a;
+      --panel: rgba(18, 29, 43, 0.9);
+      --panel-strong: rgba(12, 23, 36, 0.96);
+      --card: rgba(18, 29, 43, 0.72);
+      --line: rgba(148, 163, 184, 0.18);
+      --text: #e5eefb;
+      --muted: #a8b6cc;
+      --soft: #dbe8ff;
+      --brand: #7dd3fc;
+      --brand-2: #3b82f6;
+      --brand-3: #8b5cf6;
+      --success: #34d399;
+      --shadow: 0 20px 60px rgba(10, 18, 31, 0.52);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #f1f1f1;
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.13), transparent 28%),
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.12), transparent 25%),
+        linear-gradient(135deg, var(--bg), var(--bg-2));
+      color: var(--text);
+      line-height: 1.7;
     }
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: #1e1e1e;
-      animation: fadeIn 2s ease;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.2rem;
-    }
-    header p {
-      font-size: 1rem;
-      color: #aaa;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      animation: slideUp 1.2s ease;
-    }
-    h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
+
     a {
-      color: #4fc3f7;
+      color: var(--brand);
       text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #333;
+      transition: opacity 0.2s ease;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    a:hover { opacity: 0.85; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
     }
 
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 30px 28px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(12, 23, 36, 0.92), rgba(17, 34, 50, 0.85));
+      box-shadow: var(--shadow);
     }
-    .highlight {
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -30% auto auto -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(125, 211, 252, 0.28), transparent 65%);
+      filter: blur(12px);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -40px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.16), transparent 60%);
+      filter: blur(18px);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .title-block {
+      flex: 1 1 560px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.08);
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      color: var(--brand);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--brand), #d8b4fe, #60a5fa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: bold;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      font-size: 1.02rem;
+      color: var(--soft);
+      letter-spacing: 0.02em;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      flex: 1 1 280px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--soft);
+      font-size: 0.87rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    .profile-copy {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .profile-copy p {
+      margin: 0 0 14px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.08);
+      border: 1px solid rgba(125, 211, 252, 0.15);
+      color: var(--soft);
+      font-size: 0.8rem;
+    }
+
+    .rhs {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .section-header h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--soft);
+    }
+
+    .entry {
+      position: relative;
+      margin-bottom: 18px;
+      padding: 18px 18px 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(8, 17, 31, 0.42);
+    }
+
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-title {
+      margin: 0;
+      font-size: 1.02rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .entry-meta {
+      margin-top: 5px;
+      color: var(--brand);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .entry ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .entry li { margin-bottom: 8px; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .skill-group {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(8, 17, 31, 0.38);
+      padding: 16px;
+    }
+
+    .skill-group strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--soft);
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .skill-group span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .timeline-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .timeline-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .timeline-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 0 12px rgba(125, 211, 252, 0.6);
+    }
+
+    .quality {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.79rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding: 20px 8px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        justify-content: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: #111827;
+      }
+
+      .panel,
+      .hero,
+      .entry,
+      .skill-group {
+        box-shadow: none;
+        border-color: rgba(15, 23, 42, 0.18);
+        background: white;
+      }
+
+      .hero::before,
+      .hero::after {
+        display: none;
+      }
+
+      a {
+        color: #1d4ed8;
+      }
+
+      .gradient-text {
+        -webkit-text-fill-color: initial;
+        background: none;
+        color: #111827;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="highlight">Shubham Shirodkar</h1>
-    <p>MSc AI & Data Science | Physical Educator & Sales Strategist turned Technologist</p>
-  </header>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="title-block">
+          <div class="eyebrow">AI • Data Science • Analytics</div>
+          <h1><span class="gradient-text">Shubham Shirodkar</span></h1>
+          <p class="subtitle">Data Analytics, Data Science &amp; Machine Learning</p>
+        </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      A uniquely cross functional professional with hands on experience in <span class="highlight">Physical Education</span>, 
-      high-performing <span class="highlight">Sales Management</span>, and a growing passion for <span class="highlight">Artificial Intelligence</span>.
-      I leverage insights from real world people management and business operations to build data-driven and human-centric ML systems. 
-      My career is a blend of discipline, empathy, and analytics now shaped into a technical path with a future focused mindset.
-    </p>
-  </section>
+        <div class="contact-box">
+          <div class="contact-pill">📍 Southampton, United Kingdom</div>
+          <div class="contact-pill">📞 +44 7721 708679</div>
+          <div class="contact-pill">✉️ <a href="mailto:shirodkarshubham9@gmail.com">shirodkarshubham9@gmail.com</a></div>
+          <div class="contact-pill">🔗 <a href="https://www.linkedin.com/in/shubham-shirodkar-53b531223/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+          <div class="contact-pill">💻 <a href="https://github.com/Shub95-dot" target="_blank" rel="noreferrer">GitHub</a></div>
+        </div>
+      </div>
+    </header>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>AI-Powered Health & Wellness Chatbot (Prototype)</strong><br />
-        - Suggests pregnancy safe workouts (trimester-wise) based on WHO guidelines<br />
-        - Includes cycle-aware programming for menstruation phases<br />
-        - Accepts injury input to adapt exercises<br />
-        - Future vision: image/video-based injury detection
-        - Cons : Need bug fixing (working on it)
-      </li>
-      <li>
-        <strong>Urban Wildlife TUI Software</strong><br />
-        - Python-based CLI app using pandas to analyze urban wildlife datasets<br />
-        - No external API, completely standalone terminal interaction
-      </li>
-      <li>
-        <strong>Churn Prediction Model</strong><br />
-        - Customer churn prediction model (SVM) with approx 82% accuracy<br />
-        - Multiple models were trained but SVM was the best performings<br />
-        - Similar performance models trained were Logistic Regression (81.92% accuracy, Should have gone with logistic regression based on its high dimensionality handling)s<br />
-        </li>
-      <li>
-        <strong>UPCOMING PROJECTS</strong><br />
-        - Market Predictive Analysiss<br />
-        - Maternity Risk Prediction Analysiss<br />
-      </li>
-    </ul>
-  </section>
+    <div class="main-grid">
+      <main>
+        <section class="panel">
+          <h2>Profile</h2>
+          <div class="profile-copy">
+            <p>
+              MSc Artificial Intelligence and Data Science student (Solent University) with published, peer-reviewed research in clinical risk classification and hands-on experience building multi-model ensemble and deep learning systems end-to-end — from data pipeline to deployed dashboard.
+            </p>
+            <p>
+              Comfortable across the full stack: feature engineering, model development (XGBoost, LightGBM, LSTM/TCN/Transformer architectures), imbalanced-data handling, explainability, and CI/CD deployment. Seeking entry-level Data Science / Data Analyst roles in the UK.
+            </p>
+          </div>
+          <div class="stack">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Deep Learning</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">GitHub Actions</span>
+          </div>
+        </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>MSc Artificial Intelligence and Data Science – Solent University (Expected 2026)</li>
-      <li>Bachelor of Physical Education – Don Bosco College (2019)</li>
-      <li>Bachelor of Science in Chemistry – Chowgule College (2017)</li>
-    </ul>
-  </section>
+        <section class="section">
+          <div class="section-header">
+            <h3>Key Projects</h3>
+          </div>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Data Analyst Bootcamp (Udemy)</li>
-      <li>Intermediate Machine Learning (Kaggle)</li>
-      <li>Deep Learning: Getting Started (LinkedIn Learning)</li>
-    </ul>
-  </section>
+          <article class="entry">
+            <h4 class="entry-title">STRIDE (Sensorless Tracking for Risk and Injury Detection in Exercise)</h4>
+            <div class="entry-meta">Research • Clinical Risk Modelling • Exercise Analytics</div>
+            <ul>
+              <li>Published peer-reviewed research on maternal health risk classification using machine learning techniques.</li>
+              <li>Built a Voting Ensemble classifier achieving 0.889 macro recall and 0.857–0.858 cross-validated recall using StratifiedKFold + SMOTE.</li>
+              <li>Delivered Tableau Public dashboards and reviewer-response documentation as part of the publication process.</li>
+            </ul>
+          </article>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>Sales Manager – Kotak Life Insurance (2024–2025)</li>
-      <li>Branch Development Manager – India First Life Insurance (2022–2024)</li>
-      <li>Physical Educator – Shishuvikas High School, Crescent School (2019–2024)</li>
-    </ul>
-  </section>
+          <article class="entry">
+            <h4 class="entry-title">SOLiGence Barometer Ensemble System</h4>
+            <div class="entry-meta">Forecasting • Ensemble Learning • Sentiment Analytics</div>
+            <ul>
+              <li>Developed a multi-layer ensemble forecasting system for 4 NASDAQ-100 tickers across multiple horizons.</li>
+              <li>Combined BiLSTM, XGBoost, TCN, and TFT-Lite base models with a LightGBM meta-learner and out-of-fold stacking.</li>
+              <li>Implemented a custom regime-detection gate and FinBERT-based sentiment pipeline connected to a FastAPI/Streamlit dashboard.</li>
+            </ul>
+          </article>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:shirodkarshubham9@gmail.com">shirodkarshubham9@gmail.com</a><br />
-    LinkedIn: <a href="https://www.linkedin.com/in/shubham-shirodkar-53b531223/" target="_blank">shubham-shirodkar</a></p>
-  </section>
+          <article class="entry">
+            <h4 class="entry-title">Sensorless Markerless Athlete Injury-Risk Screening Framework</h4>
+            <div class="entry-meta">MSc Dissertation • Computer Vision • Biomechanics</div>
+            <ul>
+              <li>Building a video-based screening system to identify risk-associated movement patterns in squat, lunge, and drop-jump exercises.</li>
+              <li>Validated markerless pose extraction against OpenCap data from 48 trials and 8 subjects.</li>
+              <li>Developed uncertainty-weighted screening logic and counterfactual explainability for interpretability.</li>
+            </ul>
+          </article>
 
-  <footer>
-    &copy; 2026 Shubham Shirodkar | Resume Page
-  </footer>
+          <article class="entry">
+            <h4 class="entry-title">Customer Churn Prediction Model</h4>
+            <div class="entry-meta">Classification • Feature Engineering • Model Evaluation</div>
+            <ul>
+              <li>Built a churn prediction workflow covering data preparation, feature engineering, model selection, and evaluation.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h3>Experience</h3>
+          </div>
+
+          <article class="entry">
+            <h4 class="entry-title">Team Member</h4>
+            <div class="entry-meta">KFC Milbrook | Current</div>
+            <ul>
+              <li>Customer service and operational support in a fast-paced service environment.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <h4 class="entry-title">Sortation Associate</h4>
+            <div class="entry-meta">Amazon Warehouse, Poole | Nov 2025 – Jan 2026</div>
+            <ul>
+              <li>Focused on warehouse operations, sorting accuracy, and high-volume workflow efficiency.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <h4 class="entry-title">Sales Manager</h4>
+            <div class="entry-meta">Kotak Life Insurance | 2024–2025</div>
+            <ul>
+              <li>Led sales operations, client engagement, and revenue-focused strategy.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <h4 class="entry-title">Branch Development Manager</h4>
+            <div class="entry-meta">India First Life Insurance | 2022–2024</div>
+            <ul>
+              <li>Managed branch operations, team development, and performance improvement initiatives.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+
+      <aside class="rhs">
+        <section class="panel">
+          <h2>Education</h2>
+          <div class="entry">
+            <h4 class="entry-title">MSc Artificial Intelligence and Data Science</h4>
+            <div class="entry-meta">Solent University, United Kingdom</div>
+            <ul>
+              <li>Dissertation: "Sensorless Markerless Screening Framework for Identifying Kinematic Patterns Associated with Elevated Injury Risk Across Multiple Athletic Exercises" (STRIDE)</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <h4 class="entry-title">Bachelor of Physical Education</h4>
+            <div class="entry-meta">Don Bosco College | 2019 | 81.5%</div>
+          </div>
+
+          <div class="entry">
+            <h4 class="entry-title">BSc Chemistry</h4>
+            <div class="entry-meta">Chowgule College | 2017 | 67%</div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Core Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <strong>Analytics</strong>
+              <span>SQL, Python, NumPy, Pandas, Matplotlib, scikit-learn</span>
+            </div>
+            <div class="skill-group">
+              <strong>ML / DL</strong>
+              <span>XGBoost, LightGBM, LSTM, TCN, Transformers, Ensemble Stacking</span>
+            </div>
+            <div class="skill-group">
+              <strong>CV</strong>
+              <span>OpenCV, MediaPipe</span>
+            </div>
+            <div class="skill-group">
+              <strong>Deployment</strong>
+              <span>FastAPI, Streamlit, GitHub Actions, Git, Jupyter</span>
+            </div>
+            <div class="skill-group">
+              <strong>BI</strong>
+              <span>Tableau, Power BI</span>
+            </div>
+            <div class="skill-group">
+              <strong>Methods</strong>
+              <span>SMOTE, feature engineering, explainability, model evaluation</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Certifications</h2>
+          <ul class="timeline-list">
+            <li><strong>The Data Analyst Course:</strong> Complete Data Analyst Bootcamp — 365 Careers (Udemy), 21.5 hours, Dec 2025</li>
+            <li><strong>Intermediate Machine Learning</strong> — Kaggle</li>
+            <li><strong>Deep Learning: Getting Started</strong> — LinkedIn Learning</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>Languages</h2>
+          <div class="quality">English • Hindi • Konkani</div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © 2026 Shubham Shirodkar | Resume Page
+    </footer>
+  </div>
 </body>
 </html>
