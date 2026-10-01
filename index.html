@@ -257,6 +257,11 @@
       font-weight: 600;
     }
 
+    .entry-link {
+      margin-top: 10px;
+      font-size: 0.82rem;
+    }
+
     .entry ul {
       margin: 12px 0 0 18px;
       padding: 0;
@@ -415,10 +420,10 @@
           <h2>Profile</h2>
           <div class="profile-copy">
             <p>
-              MSc Artificial Intelligence and Data Science student (Solent University) with published, peer-reviewed research in clinical risk classification and hands-on experience building multi-model ensemble and deep learning systems end-to-end — from data pipeline to deployed dashboard.
+              MSc Artificial Intelligence and Data Science student (Solent University) with published, peer-reviewed research in clinical risk classification and hands-on experience building multi-modal machine learning systems for healthcare, fitness analytics, and financial forecasting.
             </p>
             <p>
-              Comfortable across the full stack: feature engineering, model development (XGBoost, LightGBM, LSTM/TCN/Transformer architectures), imbalanced-data handling, explainability, and CI/CD deployment. Seeking entry-level Data Science / Data Analyst roles in the UK.
+              Comfortable across the full stack: feature engineering, model development (XGBoost, LightGBM, LSTM/TCN/Transformer architectures), imbalanced-data handling, explainability, and CI/CD automation. Strong focus on translating research into production-ready applications.
             </p>
           </div>
           <div class="stack">
@@ -426,7 +431,7 @@
             <span class="chip">SQL</span>
             <span class="chip">Machine Learning</span>
             <span class="chip">Deep Learning</span>
-            <span class="chip">Tableau</span>
+            <span class="chip">Computer Vision</span>
             <span class="chip">FastAPI</span>
             <span class="chip">GitHub Actions</span>
           </div>
@@ -434,45 +439,87 @@
 
         <section class="section">
           <div class="section-header">
-            <h3>Key Projects</h3>
+            <h3>Featured Projects</h3>
           </div>
 
           <article class="entry">
-            <h4 class="entry-title">STRIDE (Sensorless Tracking for Risk and Injury Detection in Exercise)</h4>
-            <div class="entry-meta">Research • Clinical Risk Modelling • Exercise Analytics</div>
+            <h4 class="entry-title">STRIDE: Sensorless Tracking for Risk &amp; Injury Detection in Exercise</h4>
+            <div class="entry-meta">MSc Dissertation • Computer Vision • Biomechanics • Published Research</div>
             <ul>
-              <li>Published peer-reviewed research on maternal health risk classification using machine learning techniques.</li>
-              <li>Built a Voting Ensemble classifier achieving 0.889 macro recall and 0.857–0.858 cross-validated recall using StratifiedKFold + SMOTE.</li>
-              <li>Delivered Tableau Public dashboards and reviewer-response documentation as part of the publication process.</li>
+              <li>Building a video-based screening system to identify risk-associated movement patterns in squat, lunge, and drop-jump exercises using markerless pose estimation.</li>
+              <li>Validated markerless pose extraction against OpenCap data from 48 trials across 8 subjects, achieving high spatial accuracy.</li>
+              <li>Developed uncertainty-weighted screening logic and counterfactual explainability for interpretable injury-risk predictions.</li>
+              <li>Published peer-reviewed research with comprehensive Tableau dashboards and statistical validation.</li>
             </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/STRIDE-Sensorless-Tracking-for-Risk-and-Injury-Detection-in-Exercise-" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
           </article>
 
           <article class="entry">
-            <h4 class="entry-title">SOLiGence Barometer Ensemble System</h4>
-            <div class="entry-meta">Forecasting • Ensemble Learning • Sentiment Analytics</div>
+            <h4 class="entry-title">Jobfy (JOB-PLY): Intelligent Job Application Automation</h4>
+            <div class="entry-meta">Automation • Job Market Analytics • Python Scripting</div>
             <ul>
-              <li>Developed a multi-layer ensemble forecasting system for 4 NASDAQ-100 tickers across multiple horizons.</li>
-              <li>Combined BiLSTM, XGBoost, TCN, and TFT-Lite base models with a LightGBM meta-learner and out-of-fold stacking.</li>
-              <li>Implemented a custom regime-detection gate and FinBERT-based sentiment pipeline connected to a FastAPI/Streamlit dashboard.</li>
+              <li>Developed an intelligent automation system for streamlined job application workflows on major job portals.</li>
+              <li>Integrated web scraping and data extraction to analyze job market trends and filter relevant opportunities.</li>
+              <li>Built multi-threaded application orchestration for high-volume, efficient job submissions.</li>
+              <li>Features intelligent job matching, application tracking, and performance analytics.</li>
             </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/JOB-PLY" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
           </article>
 
           <article class="entry">
-            <h4 class="entry-title">Sensorless Markerless Athlete Injury-Risk Screening Framework</h4>
-            <div class="entry-meta">MSc Dissertation • Computer Vision • Biomechanics</div>
+            <h4 class="entry-title">SOLiGence Barometer: Multi-Horizon Ensemble Stock Forecasting System</h4>
+            <div class="entry-meta">Time Series • Ensemble Learning • Sentiment Analysis • FinTech</div>
             <ul>
-              <li>Building a video-based screening system to identify risk-associated movement patterns in squat, lunge, and drop-jump exercises.</li>
-              <li>Validated markerless pose extraction against OpenCap data from 48 trials and 8 subjects.</li>
-              <li>Developed uncertainty-weighted screening logic and counterfactual explainability for interpretability.</li>
+              <li>Developed a multi-layer ensemble forecasting system for 4 NASDAQ-100 tickers across multiple prediction horizons (1-day to 30-day).</li>
+              <li>Combined BiLSTM, XGBoost, TCN, and Temporal Fusion Transformer (TFT-Lite) base models with a LightGBM meta-learner using out-of-fold stacking.</li>
+              <li>Implemented custom regime-detection gates and FinBERT-based sentiment analysis pipeline for market-aware forecasting.</li>
+              <li>Deployed FastAPI backend and Streamlit dashboard for real-time model predictions and performance monitoring.</li>
             </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/Ensemble-Barometer-Stock-Price_prediction-Model" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
+          </article>
+
+          <article class="entry">
+            <h4 class="entry-title">Health Coach: AI-Powered Fitness &amp; Wellness Chatbot</h4>
+            <div class="entry-meta">NLP • Chatbot • Fitness Analytics • Python</div>
+            <ul>
+              <li>Built an intelligent chatbot assistant that provides personalized workout recommendations and fitness guidance.</li>
+              <li>Integrated natural language processing to understand user fitness goals and generate customized training routines for home and gym environments.</li>
+              <li>Developed comprehensive workout database with progressive difficulty levels and recovery tracking.</li>
+            </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/Health_Coach" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
           </article>
 
           <article class="entry">
             <h4 class="entry-title">Customer Churn Prediction Model</h4>
             <div class="entry-meta">Classification • Feature Engineering • Model Evaluation</div>
             <ul>
-              <li>Built a churn prediction workflow covering data preparation, feature engineering, model selection, and evaluation.</li>
+              <li>Built end-to-end churn prediction pipeline covering exploratory data analysis, feature engineering, model selection, and evaluation.</li>
+              <li>Tested multiple algorithms (Logistic Regression, Random Forest, XGBoost) with rigorous cross-validation and hyperparameter optimization.</li>
+              <li>Delivered comprehensive model interpretability analysis and actionable business insights for customer retention strategies.</li>
             </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/Customer-Churn-Model" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
+          </article>
+
+          <article class="entry">
+            <h4 class="entry-title">Data Visualization Dashboard with Python &amp; Dash</h4>
+            <div class="entry-meta">Data Visualization • Interactive Dashboards • Analytics</div>
+            <ul>
+              <li>Developed interactive dashboards using Dash (Plotly) framework for real-time data visualization and exploration.</li>
+              <li>Implemented responsive layouts with multi-page navigation and advanced filtering capabilities.</li>
+            </ul>
+            <div class="entry-link">
+              🔗 <a href="https://github.com/Shub95-dot/data-vis-python-dash-3009706" target="_blank" rel="noreferrer">View Repository</a>
+            </div>
           </article>
         </section>
 
@@ -522,7 +569,8 @@
             <h4 class="entry-title">MSc Artificial Intelligence and Data Science</h4>
             <div class="entry-meta">Solent University, United Kingdom</div>
             <ul>
-              <li>Dissertation: "Sensorless Markerless Screening Framework for Identifying Kinematic Patterns Associated with Elevated Injury Risk Across Multiple Athletic Exercises" (STRIDE)</li>
+              <li><strong>Dissertation:</strong> "Sensorless Markerless Screening Framework for Identifying Kinematic Patterns Associated with Elevated Injury Risk Across Multiple Athletic Exercises" (STRIDE Project)</li>
+              <li>Focus: Computer Vision, Biomechanics, Clinical Risk Modelling, Deep Learning</li>
             </ul>
           </div>
 
@@ -541,28 +589,28 @@
           <h2>Core Skills</h2>
           <div class="skills-grid">
             <div class="skill-group">
-              <strong>Analytics</strong>
-              <span>SQL, Python, NumPy, Pandas, Matplotlib, scikit-learn</span>
+              <strong>Analytics &amp; Data</strong>
+              <span>SQL, Python, NumPy, Pandas, Matplotlib, Seaborn</span>
             </div>
             <div class="skill-group">
               <strong>ML / DL</strong>
-              <span>XGBoost, LightGBM, LSTM, TCN, Transformers, Ensemble Stacking</span>
+              <span>XGBoost, LightGBM, LSTM, TCN, Transformers, Ensemble Stacking, SMOTE</span>
             </div>
             <div class="skill-group">
-              <strong>CV</strong>
-              <span>OpenCV, MediaPipe</span>
+              <strong>Computer Vision</strong>
+              <span>OpenCV, MediaPipe, Pose Estimation, YOLOv8</span>
             </div>
             <div class="skill-group">
-              <strong>Deployment</strong>
-              <span>FastAPI, Streamlit, GitHub Actions, Git, Jupyter</span>
+              <strong>Deployment &amp; DevOps</strong>
+              <span>FastAPI, Streamlit, GitHub Actions, Git, Docker basics</span>
             </div>
             <div class="skill-group">
-              <strong>BI</strong>
-              <span>Tableau, Power BI</span>
+              <strong>BI &amp; Visualization</strong>
+              <span>Tableau, Power BI, Plotly, Dash</span>
             </div>
             <div class="skill-group">
-              <strong>Methods</strong>
-              <span>SMOTE, feature engineering, explainability, model evaluation</span>
+              <strong>Methods &amp; Practices</strong>
+              <span>Feature Engineering, Model Explainability, Hyperparameter Tuning, Cross-validation</span>
             </div>
           </div>
         </section>
@@ -573,6 +621,7 @@
             <li><strong>The Data Analyst Course:</strong> Complete Data Analyst Bootcamp — 365 Careers (Udemy), 21.5 hours, Dec 2025</li>
             <li><strong>Intermediate Machine Learning</strong> — Kaggle</li>
             <li><strong>Deep Learning: Getting Started</strong> — LinkedIn Learning</li>
+            <li><strong>SQL for Data Analysis</strong> — LinkedIn Learning</li>
           </ul>
         </section>
 
